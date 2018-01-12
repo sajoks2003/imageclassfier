@@ -1,26 +1,52 @@
-# How-to-Predict-Stock-Prices-Easily-Demo
-How to Predict Stock Prices Easily - Intro to Deep Learning #7 by Siraj Raval on Youtube
+# Tensorflow Chatbot
+Tensorflow Chatbot Demo by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo)
 
-##Overview
+Overview
+============
+This is the full code for 'How to Make an Amazing Tensorflow Chatbot Easily' by @Sirajology on [Youtube](https://youtu.be/SJDEOWLHYVo). In this demo code, we implement Tensorflows [Sequence to Sequence](https://www.tensorflow.org/versions/r0.12/tutorials/seq2seq/index.html) model to train a
+chatbot on the [Cornell Movie Dialogue dataset](https://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html). After training for a few hours, the bot is able to hold a fun conversation.
 
-This is the code for [this](https://youtu.be/ftMq5ps503w) video on Youtube by Siraj Raval part of the Udacity Deep Learning nanodegree. We use an [LSTM neural network](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) to predict the closing price of the S&P 500 using a dataset of past prices.
 
-##Dependencies
+Dependencies
+============
+* numpy
+* scipy 
+* six
+* tensorflow (https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html)
 
-* keras
-* tensorflow
+Use [pip](https://pypi.python.org/pypi/pip) to install any missing dependencies
 
-Install Keras from [here](https://keras.io/) and Tensorflow from [here](https://www.tensorflow.org/versions/r0.12/get_started/os_setup). 
 
-##Usage
+Usage
+===========
 
-Run this using [jupyter notebook](http://jupyter.readthedocs.io/en/latest/install.html). Just type `jupyter notebook` in the main directory and the code will pop up in a browser window. 
+To train the bot, edit the `seq2seq.ini` file so that mode is set to train like so
 
-#Coding Challenge - Due Date, Thursday, March 2nd 2017 at 12 PM PST
+`mode = train`
 
-Use the price history AND two other metrics of your choice to predict the price of GOOGL stock with an LSTM network. You can find the CSV [here](https://www.google.com/finance/historical?q=NASDAQ%3AGOOGL&ei=Xu6wWKnDAcS1jAGX6a-ACg). Metrics could be sentiment analysis from Twitter of what people have said about Google, dividends, etc. 
+then run the code like so
 
-##Credits
+``python execute.py``
 
-Credits go to [jaungiers](https://github.com/jaungiers/LSTM-Neural-Network-for-Time-Series-Prediction). I've merely created a wrapper to get people started.
+To test the bot during or after training, edit the `seq2seq.ini` file so that mode is set to test like so
 
+`mode = test`
+
+then run the code like so
+
+``python execute.py``
+
+
+Challenge
+===========
+
+The challenge for this video is write an entirely different script using [TF Learn](http://tflearn.org/) to generate Lord of the Ring style sentences. Check out this very similar [example](https://github.com/tflearn/tflearn/blob/master/examples/nlp/lstm_generator_shakespeare.py), it uses TF Learn to generate Shakespeare-style sentences. Train your model on Lord of the rings text to do something similar! And play around with the hyperparameters to get a more accurate result. Post your GitHub link in the video comments and I'll judge it! 
+
+### Due date: December 8th
+
+Also see this issue, some people have found this discussion helpful
+https://github.com/llSourcell/tensorflow_chatbot/issues/3
+
+Credits
+===========
+Credit for the vast majority of code here goes to [suriyadeepan](https://github.com/suriyadeepan). I've merely created a wrapper to get people started. 
